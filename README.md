@@ -7,6 +7,11 @@ The cube can changed between bronze and grey.
 The yellow line is the lightsource vector.  
 
 
-![](pictures/lightbox1.PNG)
-![](pictures/lightbox2.PNG)
-![](pictures/lightbox3.PNG)
+Light source movement
+![](pictures/lightMoveChange.gif)
+
+Camera controls
+![](pictures/cameraMove.gif)
+![](pictures/cameraTilt.gif)
+
+
