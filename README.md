@@ -8,10 +8,10 @@ The yellow line is the lightsource vector.
 
 
 Light source movement
-![](pictures/lightMoveChange.gif)
+![](pictures/lightMoveChange1.gif)
 Camera Position
-![](pictures/cameraMove.gif)
+![](pictures/cameraMove1.gif)
 Camera Orientation
-![](pictures/cameraTilt.gif)
+![](pictures/cameraTilt1.gif)
 
 
