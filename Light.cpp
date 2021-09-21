@@ -360,39 +360,11 @@ Vector3 getSV(Point3 shape, Point3 sun)
     return Vector3(shape, sun);
 }
 
-
-
 double light(Vector3 s, Vector3 m, Vector3 v, double Ia, double Pa, double Id, double Pd, double Is, double Ps, int f) {
     
     return (Ia * Pa) + (Id * Pd * lambert(s,m)) + ( Is * Ps * phong(v, s, m, f));
 
 }
-
-void axis(double length)
-{
-    glPushMatrix();
-        glBegin(GL_LINES);
-            //x is red
-            glColor3d(1,0,0);
-            glVertex3d(0, 0, 0);
-            glVertex3d(length,0,0);
-
-            //y is green
-            glColor3d(.5,1,.5);
-            glVertex3d(0, 0, 0);
-            glVertex3d(0, length, 0);
-
-            //z is blue
-            glColor3d(0,0,1);
-            glVertex3d(0, 0, 0);
-            glVertex3d(0, 0, length);
-        glEnd();
-
-    glPopMatrix();
-
-    
-}
-
 
 void drawNumbers()
 {
@@ -452,72 +424,6 @@ void drawNumbers()
     
 }
   
-void drawSecretShapes(void)
-{
-
-    glPushMatrix();
-        glColor3d(.4,.2,.9);
-        glTranslated(-1.5,-1,-1);
-        glScaled(SX-.15,SY-.1,SZ-.1);
-        glRotated(a, RX, RY, RZ);
-        glutSolidCube(1);
-        glColor3d(0,0,0);
-        glutWireCube(1);
-    glPopMatrix();
-
-    glPushMatrix();
-        glColor3d(.2,0,.2);
-        glTranslated(-1.1,-1.3,-1.5);
-        glScaled(SX-.15,SY-.1,SZ-.1);
-        glRotated(a, RX, RY, RZ);
-        glutSolidSphere(.60,10,50);
-        glColor3d(0,0,0);
-        glutWireSphere(.60,10,50);
-    glPopMatrix();
-
-    glPushMatrix();
-        glColor3d(0,.56,.1);
-        glTranslated(-2.7,-2.9,-2.6);
-        glScaled(SX-.15,SY-.1,SZ-.1);
-        glRotated(a, RX, RY, RZ);
-        glutSolidCone(.30,1,10,10);
-        glColor3d(0,0,0);
-        glutWireCone(.30,1,10,10);
-    glPopMatrix();
-
-    glPushMatrix();
-        glColor3d(.5,0,.5);
-        glTranslated(1.5,1,1);
-        glScaled(SX+.15,SY+.1,SZ+.1);
-        glRotated(a, RX, RY, RZ);
-        glutSolidCube(1);
-        glColor3d(0,0,0);
-        glutWireCube(1);
-    glPopMatrix();
-
-    glPushMatrix();
-        glColor3d(.3,.5,.98);
-        glTranslated(1.1,1.3,1.5);
-        glScaled(SX+.15,SY+.1,SZ+.1);
-        glRotated(a, RX, RY, RZ);
-        glutSolidIcosahedron();
-        glColor3d(0,0,0);
-        glutWireIcosahedron();
-
-    glPopMatrix();
-
-    glPushMatrix();
-        glColor3d(.1,.7,.2);
-        glTranslated(1.5,2.2,1.4);
-        glScaled(SX+.15,SY+.1,SZ+.1);
-        glRotated(a, RX, RY, RZ);
-        glutSolidTorus(.50,.50,5,5);
-        glColor3d(0,0,0);
-        glutWireTorus(.50,.50,5,5);
-
-    glPopMatrix();
-    
-}
 Point3 sunShine = Point3(15,20,10);
 bool GS = false;
 
